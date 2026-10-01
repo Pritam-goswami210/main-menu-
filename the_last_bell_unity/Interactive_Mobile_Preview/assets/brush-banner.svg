@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 84" width="520" height="84">
+  <defs>
+    <filter id="grungeBrush" x="-10%" y="-30%" width="120%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.065" numOctaves="4" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <linearGradient id="bloodGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a0808" stop-opacity="0.85"/>
+      <stop offset="12%" stop-color="#801010" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#991414" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#7e1111" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#3d0606" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Heavy base brush stroke -->
+  <path d="M 18,42 
+           C 28,26 50,22 95,20 
+           C 150,18 230,21 315,19 
+           C 395,17 450,22 495,30 
+           C 512,33 516,46 502,54 
+           C 475,60 415,62 345,63 
+           C 255,65 165,62 105,63 
+           C 55,64 25,58 10,50 
+           C 2,46 6,43 18,42 Z" 
+        fill="url(#bloodGradient)" filter="url(#grungeBrush)"/>
+
+  <!-- Rough upper edge dry bristle strokes -->
+  <path d="M 32,30 Q 140,23 285,23 T 480,33 Q 390,38 250,39 T 40,41 Z" 
+        fill="#b31919" opacity="0.65" filter="url(#grungeBrush)"/>
+
+  <!-- Fine horizontal bristle drag lines -->
+  <path d="M 8,43 Q 80,39 170,38 T 360,40 Q 455,41 510,48" 
+        stroke="#590909" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6" filter="url(#grungeBrush)"/>
+  <path d="M 22,36 Q 110,32 230,31 T 440,35 Q 490,38 506,44" 
+        stroke="#801010" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5" filter="url(#grungeBrush)"/>
+
+  <!-- Splatter droplets and frayed bleeding tips -->
+  <circle cx="5" cy="42" r="2.2" fill="#7a0f0f"/>
+  <circle cx="12" cy="51" r="1.6" fill="#8f1111"/>
+  <circle cx="2" cy="47" r="1.2" fill="#5c0b0b"/>
+  <circle cx="508" cy="34" r="2" fill="#7a0f0f"/>
+  <circle cx="503" cy="52" r="1.7" fill="#8f1111"/>
+  <circle cx="514" cy="45" r="1.3" fill="#991414"/>
+  <circle cx="488" cy="61" r="1.5" fill="#6e0e0e"/>
+</svg>
